@@ -1,0 +1,30 @@
+.contenido {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 80vh;
+}
+
+aside {
+    padding: 20px;
+}
+
+main {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#lista-tareas {
+    border: 1px solid black;
+    padding: 10px;
+    list-style: none;
+    min-height: 500px;
+}
+
+#lista-tareas li {
+    margin-bottom: 10px;
+}
+
+#lista-tareas button {
+    width: 100%;
+    padding: 15px;
+}
