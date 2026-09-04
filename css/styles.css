@@ -28,3 +28,53 @@ main {
     width: 100%;
     padding: 15px;
 }
+
+
+#vista-asignaturas {
+    display: none;
+    padding: 20px;
+}
+
+#form-asignatura {
+    display: none;
+}
+
+#lista-asignaturas li button {
+    margin-left: 20px;
+}
+
+#form-tarea {
+    display: none;
+}
+
+#vista-nueva-tarea {
+    display: none;
+    padding: 20px;
+}
+
+#form-tarea {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+#form-tarea input,
+#form-tarea textarea,
+#form-tarea select {
+    padding: 8px;
+    font-size: 16px;
+}
+
+#descripcion-tarea {
+    min-height: 100px;
+}
+
+#acciones-tarea {
+    display: none;
+}
+
+#vista-historial {
+    display: none;
+    padding: 20px;
+}

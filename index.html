@@ -14,45 +14,42 @@
 
         <h1>Actividades académicas</h1>
 
-        <button id="btn-agregar-asignatura">Nueva Asignatura</button>
-        <button id="btn-agregar-tarea">Nueva tarea</button>
+        <button id="btn-Asignaturas">Asignaturas</button>
         <button id="btn-Historial">Historial</button>
         <button id="btn-filtro">Filtro</button>
+        <div id="filtros">
+            <label for="filtro-asignatura">Asignatura:</label>
+            <select id="filtro-asignatura">
+                <option value="todas">Todas</option>
+            </select>
+
+            <label for="filtro-estado">Estado:</label>
+            <select id="filtro-estado">
+                <option value="todos">Todos</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="en-progreso">En progreso</option>
+                <option value="completada">Completada</option>
+            </select>
+        </div>
 
     </header>
 
 
-    <div class="contenido">
-
-
+    <div class="contenido" id="vista-tareas">
         <aside>
-
             <section>
-
                 <p>Fecha actual</p>
 
                 <p id="fecha-actual"></p>
-
             </section>
-
 
             <section>
 
                 <h2>Mis tareas</h2>
 
+                <button id="btn-agregar-tarea">Nueva tarea</button>
+
                 <ul id="lista-tareas">
-
-                    <li>
-                        <button>Tarea 1</button>
-                    </li>
-
-                    <li>
-                        <button>Tarea 2</button>
-                    </li>
-
-                    <li>
-                        <button>Tarea 3</button>
-                    </li>
 
                 </ul>
 
@@ -76,9 +73,85 @@
 
             </section>
 
+            <div id="acciones-tarea">
+                <button id="btn-editar-tarea">Editar</button>
+                <button id="btn-eliminar-tarea">Eliminar</button>
+                <button id="btn-completar-tarea">Marcar como completada</button>
+            </div>
+
         </main>
 
     </div>
+    <div id="vista-nueva-tarea">
+
+        <h2>Nueva tarea</h2>
+
+        <form id="form-tarea">
+
+            <label for="nombre-tarea">Nombre de la tarea:</label>
+            <input type="text" id="nombre-tarea">
+
+            <label for="descripcion-tarea">Descripción:</label>
+            <textarea id="descripcion-tarea"></textarea>
+
+            <label for="asignatura-tarea">Asignatura:</label>
+            <select id="asignatura-tarea">
+            </select>
+
+            <label for="fecha-tarea">Fecha de entrega:</label>
+            <input type="date" id="fecha-tarea">
+
+            <label for="estado-tarea">Estado:</label>
+            <select id="estado-tarea">
+                <option value="pendiente">Pendiente</option>
+                <option value="en-progreso">En progreso</option>
+                <option value="completada">Completada</option>
+            </select>
+
+            <button type="button" id="btn-cancelar-tarea">Cancelar</button>
+            <button type="submit">Guardar tarea</button>
+
+        </form>
+
+    </div>
+
+    <div id="vista-historial">
+        <h2>Historial de tareas</h2>
+
+        <div class="historial-contenido">
+            <div>
+                <ul id="lista-historial"></ul>
+            </div>
+
+            <div id="detalle-historial">
+                <h3>Selecciona una tarea</h3>
+                <p>Selecciona una actividad completada para ver su información.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="vista-asignaturas">
+
+        <h2>Mis asignaturas</h2>
+
+        <button id="btn-nueva-asignatura">Nueva asignatura</button>
+        <form id="form-asignatura">
+
+            <label for="nombre-asignatura">Nombre de la asignatura:</label>
+
+            <input type="text" id="nombre-asignatura">
+
+            <button type="submit">Guardar</button>
+
+        </form>
+
+        <ul id="lista-asignaturas">
+
+        </ul>
+
+    </div>
+
+    <script src="js/app.js"></script>
 
 </body>
 
