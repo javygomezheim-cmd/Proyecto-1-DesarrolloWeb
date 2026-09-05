@@ -78,3 +78,44 @@ main {
     display: none;
     padding: 20px;
 }
+
+#panel-filtro {
+    display: none;
+    padding: 10px;
+}
+
+#panel-filtro select {
+    margin-left: 5px;
+    margin-right: 15px;
+    padding: 5px;
+}
+
+.barra-progreso {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+#barra-progreso {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.vencida {
+    color: red;
+}
+
+.hoy {
+    color: blue;
+}
+
+.proxima {
+    color: orange;
+}
+
+.normal {
+    color: green;
+}

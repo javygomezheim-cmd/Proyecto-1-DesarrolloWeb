@@ -17,7 +17,7 @@
         <button id="btn-Asignaturas">Asignaturas</button>
         <button id="btn-Historial">Historial</button>
         <button id="btn-filtro">Filtro</button>
-        <div id="filtros">
+        <div id="panel-filtro">
             <label for="filtro-asignatura">Asignatura:</label>
             <select id="filtro-asignatura">
                 <option value="todas">Todas</option>
@@ -28,9 +28,9 @@
                 <option value="todos">Todos</option>
                 <option value="pendiente">Pendiente</option>
                 <option value="en-progreso">En progreso</option>
-                <option value="completada">Completada</option>
             </select>
         </div>
+
 
     </header>
 
@@ -54,6 +54,14 @@
                 </ul>
 
             </section>
+            <div id="progreso">
+                <h3>Progreso académico</h3>
+                <p id="texto-progreso">0 de 0 tareas completadas</p>
+
+                <div class="barra-progreso">
+                    <div id="barra-progreso"></div>
+                </div>
+            </div>
 
         </aside>
 
