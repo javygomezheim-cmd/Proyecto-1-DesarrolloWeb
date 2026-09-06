@@ -92,45 +92,46 @@ asignaturas.forEach(function (asignatura) {
 
     });
 
+});
 
-    formularioAsignatura.addEventListener("submit", function (event) {
 
-        event.preventDefault();
+formularioAsignatura.addEventListener("submit", function (event) {
 
-        if (nombreAsignatura.value === "") {
-            alert("Debes ingresar un nombre para la asignatura");
-            return;
-        }
+    event.preventDefault();
 
-        asignaturas.push(nombreAsignatura.value);
+    if (nombreAsignatura.value === "") {
+        alert("Debes ingresar un nombre para la asignatura");
+        return;
+    }
 
-        const nuevaAsignatura = document.createElement("li");
+    asignaturas.push(nombreAsignatura.value);
 
-        const nombre = document.createElement("span");
-        nombre.textContent = nombreAsignatura.value;
+    const nuevaAsignatura = document.createElement("li");
 
-        const botonEliminar = document.createElement("button");
-        botonEliminar.textContent = "Eliminar";
+    const nombre = document.createElement("span");
+    nombre.textContent = nombreAsignatura.value;
 
-        nuevaAsignatura.appendChild(nombre);
-        nuevaAsignatura.appendChild(botonEliminar);
+    const botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "Eliminar";
 
-        listaAsignaturas.appendChild(nuevaAsignatura);
+    nuevaAsignatura.appendChild(nombre);
+    nuevaAsignatura.appendChild(botonEliminar);
 
-        botonEliminar.addEventListener("click", function () {
+    listaAsignaturas.appendChild(nuevaAsignatura);
 
-            const posicion = asignaturas.indexOf(nombreAsignatura.textContent);
+    botonEliminar.addEventListener("click", function () {
 
-            asignaturas.splice(posicion, 1);
+        const posicion = asignaturas.indexOf(nombre.textContent);
 
-            nuevaAsignatura.remove();
+        asignaturas.splice(posicion, 1);
 
-        });
-
-        formularioAsignatura.style.display = "none";
-        nombreAsignatura.value = "";
+        nuevaAsignatura.remove();
 
     });
+
+    formularioAsignatura.style.display = "none";
+    nombreAsignatura.value = "";
+
 });
 
 const botonNuevaTarea = document.getElementById("btn-agregar-tarea");
@@ -141,7 +142,6 @@ const asignaturaTarea = document.getElementById("asignatura-tarea");
 botonNuevaTarea.addEventListener("click", function () {
     tareaSeleccionada = null;
     editandoTarea = false;
-    
     formularioTarea.reset();
 
     asignaturaTarea.innerHTML = "";

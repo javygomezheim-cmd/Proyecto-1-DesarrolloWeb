@@ -1,7 +1,6 @@
 .contenido {
     display: grid;
     grid-template-columns: 300px 1fr;
-    min-height: 80vh;
 }
 
 aside {
@@ -17,7 +16,7 @@ main {
     border: 1px solid black;
     padding: 10px;
     list-style: none;
-    min-height: 500px;
+    min-height: 200px;
 }
 
 #lista-tareas li {
@@ -118,4 +117,29 @@ main {
 
 .normal {
     color: green;
+}
+
+
+@media (max-width: 768px) {
+
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    #lista-tareas {
+        min-height: auto;
+    }
+
+    #lista-tareas button {
+        width: 100%;
+    }
+
 }
