@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma de gestión de actividades académicas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -12,12 +13,12 @@
 
     <header>
 
-        <h1>Actividades académicas</h1>
+        <h1>Gestión académicas</h1>
 
-        <button id="btn-Asignaturas">Asignaturas</button>
-        <button id="btn-Historial">Historial</button>
-        <button id="btn-filtro">Filtro</button>
-        <div id="filtros">
+        <button id="btn-Asignaturas" class="btn btn-primary">Asignaturas</button>
+        <button id="btn-Historial" class="btn btn-secondary">Historial</button>
+        <button id="btn-filtro" class="btn btn-secondary">Filtro</button>
+        <div id="panel-filtro">
             <label for="filtro-asignatura">Asignatura:</label>
             <select id="filtro-asignatura">
                 <option value="todas">Todas</option>
@@ -28,9 +29,9 @@
                 <option value="todos">Todos</option>
                 <option value="pendiente">Pendiente</option>
                 <option value="en-progreso">En progreso</option>
-                <option value="completada">Completada</option>
             </select>
         </div>
+
 
     </header>
 
@@ -47,13 +48,21 @@
 
                 <h2>Mis tareas</h2>
 
-                <button id="btn-agregar-tarea">Nueva tarea</button>
+                <button id="btn-agregar-tarea" class="btn btn-success">Nueva tarea</button>
 
                 <ul id="lista-tareas">
 
                 </ul>
 
             </section>
+            <div id="progreso">
+                <h3>Progreso académico</h3>
+                <p id="texto-progreso">0 de 0 tareas completadas</p>
+
+                <div class="barra-progreso">
+                    <div id="barra-progreso"></div>
+                </div>
+            </div>
 
         </aside>
 
@@ -74,9 +83,9 @@
             </section>
 
             <div id="acciones-tarea">
-                <button id="btn-editar-tarea">Editar</button>
-                <button id="btn-eliminar-tarea">Eliminar</button>
-                <button id="btn-completar-tarea">Marcar como completada</button>
+                <button id="btn-editar-tarea" class="btn btn-warning">Editar</button>
+                <button id="btn-eliminar-tarea" class="btn btn-danger">Eliminar</button>
+                <button id="btn-completar-tarea" class="btn btn-success">Marcar como completada</button>
             </div>
 
         </main>
@@ -89,27 +98,27 @@
         <form id="form-tarea">
 
             <label for="nombre-tarea">Nombre de la tarea:</label>
-            <input type="text" id="nombre-tarea">
+            <input type="text" id="nombre-tarea" class="form-control">
 
             <label for="descripcion-tarea">Descripción:</label>
-            <textarea id="descripcion-tarea"></textarea>
+            <textarea id="descripcion-tarea" class="form-control"></textarea>
 
             <label for="asignatura-tarea">Asignatura:</label>
-            <select id="asignatura-tarea">
+            <select id="asignatura-tarea" class="form-select">
             </select>
 
             <label for="fecha-tarea">Fecha de entrega:</label>
-            <input type="date" id="fecha-tarea">
+            <input type="date" id="fecha-tarea" class="form-control">
 
             <label for="estado-tarea">Estado:</label>
-            <select id="estado-tarea">
+            <select id="estado-tarea" class="form-select">
                 <option value="pendiente">Pendiente</option>
                 <option value="en-progreso">En progreso</option>
                 <option value="completada">Completada</option>
             </select>
 
-            <button type="button" id="btn-cancelar-tarea">Cancelar</button>
-            <button type="submit">Guardar tarea</button>
+            <button type="button" id="btn-cancelar-tarea" class="btn btn-secondary">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar tarea</button>
 
         </form>
 

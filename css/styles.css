@@ -1,7 +1,6 @@
 .contenido {
     display: grid;
     grid-template-columns: 300px 1fr;
-    min-height: 80vh;
 }
 
 aside {
@@ -17,7 +16,7 @@ main {
     border: 1px solid black;
     padding: 10px;
     list-style: none;
-    min-height: 500px;
+    min-height: 200px;
 }
 
 #lista-tareas li {
@@ -77,4 +76,70 @@ main {
 #vista-historial {
     display: none;
     padding: 20px;
+}
+
+#panel-filtro {
+    display: none;
+    padding: 10px;
+}
+
+#panel-filtro select {
+    margin-left: 5px;
+    margin-right: 15px;
+    padding: 5px;
+}
+
+.barra-progreso {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+#barra-progreso {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.vencida {
+    color: red;
+}
+
+.hoy {
+    color: blue;
+}
+
+.proxima {
+    color: orange;
+}
+
+.normal {
+    color: green;
+}
+
+
+@media (max-width: 768px) {
+
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    #lista-tareas {
+        min-height: auto;
+    }
+
+    #lista-tareas button {
+        width: 100%;
+    }
+
 }
